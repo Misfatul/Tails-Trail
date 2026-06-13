@@ -1,0 +1,41 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="36" fill="#F8F1E8"/>
+  <rect x="40" y="40" width="600" height="640" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <rect x="672" y="40" width="568" height="640" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <text x="76" y="90" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Create / Update</text>
+  <text x="76" y="126" fill="#2D241D" font-family="Arial, sans-serif" font-size="30" font-weight="700">Pet Record Form</text>
+  <rect x="76" y="160" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="316" y="160" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="76" y="226" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="316" y="226" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="76" y="292" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="316" y="292" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="76" y="358" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="316" y="358" width="220" height="48" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="76" y="430" width="460" height="92" rx="18" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="76" y="540" width="460" height="62" rx="18" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="76" y="622" width="160" height="40" rx="20" fill="#D98845"/>
+  <rect x="252" y="622" width="160" height="40" rx="20" fill="#FFF0DE"/>
+  <text x="708" y="90" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Read / Delete</text>
+  <text x="708" y="126" fill="#2D241D" font-family="Arial, sans-serif" font-size="30" font-weight="700">Pet Records Table</text>
+  <rect x="708" y="158" width="300" height="44" rx="16" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="708" y="228" width="496" height="50" rx="14" fill="#FFF6ED"/>
+  <rect x="708" y="290" width="496" height="76" rx="14" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="708" y="382" width="496" height="76" rx="14" fill="#FFFFFF" stroke="#EBD9C9"/>
+  <rect x="1084" y="314" width="56" height="28" rx="14" fill="#FFF0DE"/>
+  <rect x="1150" y="314" width="54" height="28" rx="14" fill="#FDE8E5"/>
+  <rect x="1084" y="406" width="56" height="28" rx="14" fill="#FFF0DE"/>
+  <rect x="1150" y="406" width="54" height="28" rx="14" fill="#FDE8E5"/>
+  <text x="734" y="259" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Name</text>
+  <text x="842" y="259" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Species</text>
+  <text x="954" y="259" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Age</text>
+  <text x="1006" y="259" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Due Date</text>
+  <text x="734" y="336" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">Milo</text>
+  <text x="842" y="336" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">Dog</text>
+  <text x="954" y="336" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">3</text>
+  <text x="1006" y="336" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">2026-05-06</text>
+  <text x="734" y="428" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">Luna</text>
+  <text x="842" y="428" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">Cat</text>
+  <text x="954" y="428" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">2</text>
+  <text x="1006" y="428" fill="#2D241D" font-family="Arial, sans-serif" font-size="18">2026-04-28</text>
+</svg>

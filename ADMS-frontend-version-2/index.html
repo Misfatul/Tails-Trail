@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TailTrails | Pet Care Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="authView" class="auth-view">
+    <section class="auth-panel">
+      <div class="auth-copy">
+        <img class="auth-logo" src="assets\Gemini_Generated_Image_ (1).png" alt="TailTrails logo">
+        <p class="eyebrow">tailstrail</p>
+        <h1>Tails Trail</h1>
+        <p></p>
+      </div>
+
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button class="record-tab active" type="button" data-auth-tab="loginForm">Login</button>
+          <button class="record-tab" type="button" data-auth-tab="registerForm">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active" novalidate>
+          <div>
+            <p class="eyebrow">Owner Login</p>
+            <h2>Welcome!</h2>
+          </div>
+          <label>Email<input id="loginEmail" type="email" autocomplete="username" placeholder="Email"></label>
+          <label>Password
+            <span class="password-wrap">
+              <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+              <button id="togglePasswordBtn" class="icon-btn" type="button">Show</button>
+            </span>
+          </label>
+          <div class="auth-options">
+            <label class="check-row"><input id="rememberMe" type="checkbox"><span>Remember me</span></label>
+            <button id="seedFromLoginBtn" type="button" class="link-btn"></button>
+          </div>
+          <button id="loginBtn" class="primary-btn" type="submit"><span class="btn-label">Log in</span><span class="spinner hidden"></span></button>
+          <p id="loginMessage" class="form-message" role="status"></p>
+        </form>
+
+        <form id="registerForm" class="auth-form" novalidate>
+          <div>
+            <p class="eyebrow">New Owner</p>
+            <h2>Create account</h2>
+          </div>
+          <label>Name<input id="registerName" type="text" required></label>
+          <label>Email<input id="registerEmail" type="email" required></label>
+          <label>Password<input id="registerPassword" type="password" minlength="5" required></label>
+          <label>Phone<input id="registerPhone" type="text"></label>
+          <label>Address<textarea id="registerAddress" rows="2"></textarea></label>
+          <button class="primary-btn" type="submit">Register and enter</button>
+          <p id="registerMessage" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <main id="appView" class="app-view hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-mark" src="assets\Gemini_Generated_Image_ (1).png" alt="TailTrails logo">
+        <div>
+          <p class="eyebrow">Tails Trail</p>
+          <h2>Care Console</h2>
+        </div>
+      </div>
+
+      <nav class="nav-list">
+        <button class="nav-item active" data-section="dashboardSection">Dashboard</button>
+        <button class="nav-item" data-section="petFormSection">Pet Form</button>
+        <button class="nav-item" data-section="recordsSection">Records</button>
+        <button class="nav-item" data-section="transferSection">Transfer</button>
+        <button class="nav-item" data-section="profileSection">Profile</button>
+      </nav>
+
+      <div class="owner-card">
+        <p class="eyebrow">Signed in as</p>
+        <h3 id="ownerName">Owner</h3>
+        <p id="ownerEmail" class="muted"></p>
+        <button id="logoutBtn" class="secondary-btn" type="button">Log out</button>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Pet Care Dashboard</p>
+          <h1>Owner Dashboard</h1>
+        </div>
+        <div class="topbar-actions">
+          <button id="refreshBtn" class="secondary-btn" type="button">Refresh</button>
+          <button id="newPetBtn" class="primary-btn" type="button">Add pet</button>
+        </div>
+      </header>
+
+      <section id="dashboardSection" class="content-section active">
+        <div class="stats-grid">
+          <article class="stat-card"><span>Total pets</span><strong id="totalPets">0</strong></article>
+          <article class="stat-card"><span>Upcoming reminders</span><strong id="upcomingCount">0</strong></article>
+          <article class="stat-card"><span>Overdue alerts</span><strong id="overdueCount">0</strong></article>
+        </div>
+        <div class="section-head">
+          <div><p class="eyebrow">Pets</p><h2>Your Pet </h2></div>
+          <input id="petSearch" class="search-input" type="search" placeholder="Search pets">
+        </div>
+        <div id="loadingState" class="loading-state hidden">Loading dashboard...</div>
+        <div id="emptyState" class="empty-state hidden">
+          <h3>No pets yet</h3>
+          <p>Add a pet profile to start tracking records.</p>
+          <button id="emptyAddPetBtn" class="primary-btn" type="button">Add pet</button>
+        </div>
+        <div id="petGrid" class="pet-grid"></div>
+      </section>
+
+      <section id="petFormSection" class="content-section">
+        <article class="form-shell">
+          <div class="section-head">
+            <div><p class="eyebrow">pets table</p><h2 id="petFormTitle">Add pet</h2></div>
+            <button id="resetPetFormBtn" class="secondary-btn" type="button">Clear</button>
+          </div>
+          <form id="petForm" class="pet-form">
+            <input id="petId" type="hidden">
+            <label>Pet name<input id="petName" type="text" required></label>
+            <label>Birth date<input id="petBirthDate" type="date"></label>
+            <label>Gender<select id="petGender" required><option value="">Select</option><option>Male</option><option>Female</option></select></label>
+            <label class="check-row wide"><input id="petNeutered" type="checkbox"><span>Spayed / Neutered</span></label>
+            <label class="wide">Special description<textarea id="petDescription" rows="4"></textarea></label>
+            <button class="primary-btn wide" type="submit">Save pet</button>
+          </form>
+        </article>
+      </section>
+
+      <section id="recordsSection" class="content-section">
+        <article class="form-shell">
+          <div class="section-head">
+            <div><p class="eyebrow">Record</p><h2>Add or update records</h2></div>
+            <select id="recordPetId" class="search-input"></select>
+          </div>
+          <div class="record-tabs">
+            <button class="record-tab active" data-record-form="medicalForm" type="button">Medical</button>
+            <button class="record-tab" data-record-form="vaccinationForm" type="button">Vaccination</button>
+            <button class="record-tab" data-record-form="dewormingForm" type="button">Deworming</button>
+            <button class="record-tab" data-record-form="careForm" type="button">Care</button>
+            <button class="record-tab" data-record-form="weightForm" type="button">Weight</button>
+          </div>
+
+          <form id="medicalForm" class="record-form active">
+            <input id="medicalId" type="hidden">
+            <input id="medicalVisitDate" type="date" required>
+            <input id="medicalDiagnosis" type="text" placeholder="Diagnosis">
+            <input id="medicalMeds" type="text" placeholder="Medicines used">
+            <input id="medicalCure" type="text" placeholder="Treatment / cure">
+            <input id="medicalAllergy" type="text" placeholder="Allergy trigger">
+            <textarea id="medicalHistory" rows="3" placeholder="Medical history"></textarea>
+            <textarea id="medicalPrescriptionText" rows="3" placeholder="Prescription text"></textarea>
+            <input id="medicalPrescriptionPath" type="hidden">
+            <input id="medicalPrescriptionFile" type="file" accept="image/*">
+            <button class="primary-btn" type="submit">Save medical record</button>
+          </form>
+
+          <form id="vaccinationForm" class="record-form">
+            <input id="vaccinationId" type="hidden">
+            <input id="vaccineName" type="text" placeholder="Vaccine name" required>
+            <label>Vaccination date<input id="vaccinationDate" type="date" required></label>
+            <label>Next due date<input id="vaccinationNextDue" type="date"></label>
+            <button class="primary-btn" type="submit">Save vaccination</button>
+          </form>
+
+          <form id="dewormingForm" class="record-form">
+            <input id="dewormingId" type="hidden">
+            <input id="dewormingMedicine" type="text" placeholder="Medicine name">
+            <label>Deworming date<input id="dewormingDate" type="date" required></label>
+            <label>Next due date<input id="dewormingNextDue" type="date"></label>
+            <button class="primary-btn" type="submit">Save deworming</button>
+          </form>
+
+          <form id="careForm" class="record-form">
+            <input id="careId" type="hidden">
+            <input id="careType" type="text" placeholder="Bath, grooming, feeding, exercise" required>
+            <input id="careDate" type="date" required>
+            <textarea id="careNotes" rows="3" placeholder="Notes"></textarea>
+            <button class="primary-btn" type="submit">Save care record</button>
+          </form>
+
+          <form id="weightForm" class="record-form">
+            <input id="weightId" type="hidden">
+            <input id="weightKg" type="number" min="0" step="0.01" placeholder="Weight kg" required>
+            <input id="weightDate" type="date" required>
+            <button class="primary-btn" type="submit">Save weight</button>
+          </form>
+        </article>
+      </section>
+
+      <section id="transferSection" class="content-section">
+        <article class="form-shell">
+          <div><p class="eyebrow">Pet Transfer Records</p><h2>Transfer / adoption</h2></div>
+          <form id="transferForm" class="pet-form">
+            <label>Pet<select id="transferPetId" required></select></label>
+            <label>New owner<select id="transferOwnerId" required></select></label>
+            <label>Transfer date<input id="transferDate" type="date"><span class="muted">Leave blank to use trigger auto-date.</span></label>
+            <label class="wide">Transfer notes<textarea id="transferNotes" rows="3"></textarea></label>
+            <button class="primary-btn wide" type="submit">Transfer pet</button>
+          </form>
+        </article>
+      </section>
+
+      <section id="profileSection" class="content-section">
+        <div class="section-grid">
+          <article class="form-shell">
+            <div><p class="eyebrow">owners table</p><h2>Profile</h2></div>
+            <form id="profileForm" class="pet-form">
+              <label>Name<input id="profileName" type="text" required></label>
+              <label>Email<input id="profileEmail" type="email" required></label>
+              <label>Phone<input id="profilePhone" type="text"></label>
+              <label>Address<textarea id="profileAddress" rows="3"></textarea></label>
+              <button class="primary-btn wide" type="submit">Update profile</button>
+            </form>
+          </article>
+          <article class="form-shell">
+            <div><p class="eyebrow">Security</p><h2>Password</h2></div>
+            <form id="passwordForm" class="pet-form">
+              <label>Current password<input id="currentPassword" type="password" required></label>
+              <label>New password<input id="newPassword" type="password" minlength="5" required></label>
+              <button class="primary-btn wide" type="submit">Update password</button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="petDetailsModal" class="details-modal">
+    <button id="closeDetailsBtn" class="modal-close" type="button">Close</button>
+    <div id="petDetailsContent"></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

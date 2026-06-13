@@ -1,0 +1,36 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="36" fill="#F8F1E8"/>
+  <rect x="40" y="40" width="280" height="640" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <rect x="72" y="78" width="216" height="136" rx="24" fill="#FFF3E6"/>
+  <text x="92" y="118" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">ADMS Project</text>
+  <text x="92" y="160" fill="#2D241D" font-family="Arial, sans-serif" font-size="34" font-weight="700">Tails Trail</text>
+  <text x="92" y="190" fill="#6D6259" font-family="Arial, sans-serif" font-size="16">Pet care dashboard and records</text>
+  <rect x="72" y="246" width="216" height="54" rx="18" fill="#D98845"/>
+  <rect x="72" y="314" width="216" height="54" rx="18" fill="#FFF3E6"/>
+  <rect x="72" y="382" width="216" height="54" rx="18" fill="#FFF3E6"/>
+  <rect x="72" y="450" width="216" height="54" rx="18" fill="#FFF3E6"/>
+  <rect x="352" y="40" width="888" height="100" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <text x="392" y="82" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Frontend Submission</text>
+  <text x="392" y="116" fill="#2D241D" font-family="Arial, sans-serif" font-size="28" font-weight="700">Pet Care Dashboard</text>
+  <rect x="352" y="164" width="888" height="170" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <text x="392" y="210" fill="#B76422" font-family="Arial, sans-serif" font-size="16" font-weight="700">Overview</text>
+  <text x="392" y="248" fill="#2D241D" font-family="Arial, sans-serif" font-size="30" font-weight="700">Manage pets, medical history, and reminders</text>
+  <rect x="918" y="216" width="108" height="40" rx="20" fill="#FFF0DE"/>
+  <rect x="1042" y="216" width="108" height="40" rx="20" fill="#FFF0DE"/>
+  <rect x="1166" y="216" width="52" height="40" rx="20" fill="#FFF0DE"/>
+  <rect x="352" y="362" width="274" height="138" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <rect x="659" y="362" width="274" height="138" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <rect x="966" y="362" width="274" height="138" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <text x="388" y="406" fill="#6D6259" font-family="Arial, sans-serif" font-size="18">Total Pets</text>
+  <text x="388" y="460" fill="#2D241D" font-family="Arial, sans-serif" font-size="48" font-weight="700">02</text>
+  <text x="695" y="406" fill="#6D6259" font-family="Arial, sans-serif" font-size="18">Vaccination Alerts</text>
+  <text x="695" y="460" fill="#2D241D" font-family="Arial, sans-serif" font-size="48" font-weight="700">02</text>
+  <text x="1002" y="406" fill="#6D6259" font-family="Arial, sans-serif" font-size="18">Deworming Alerts</text>
+  <text x="1002" y="460" fill="#2D241D" font-family="Arial, sans-serif" font-size="48" font-weight="700">02</text>
+  <rect x="352" y="530" width="430" height="150" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <rect x="810" y="530" width="430" height="150" rx="28" fill="#FFFDF9" stroke="#EBD9C9"/>
+  <text x="388" y="574" fill="#2D241D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Version 1 Scope</text>
+  <text x="388" y="608" fill="#6D6259" font-family="Arial, sans-serif" font-size="16">Structured forms, basic styling, and form submission handlers.</text>
+  <text x="846" y="574" fill="#2D241D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Version 2 Scope</text>
+  <text x="846" y="608" fill="#6D6259" font-family="Arial, sans-serif" font-size="16">View records, edit data, delete rows, and show notifications.</text>
+</svg>

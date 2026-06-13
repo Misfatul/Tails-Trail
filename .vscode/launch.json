@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Tails Trail",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/ADMS-frontend-version-2/index.html",
+            "webRoot": "${workspaceFolder}/ADMS-frontend-version-2"
+        },
+        {
+            "name": "Attach to Chrome",
+            "type": "pwa-chrome",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/ADMS-frontend-version-2"
+        }
+    ]
+}

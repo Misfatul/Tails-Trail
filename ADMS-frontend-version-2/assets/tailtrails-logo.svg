@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TailTrails logo</title>
+  <desc id="desc">Line art logo with a pet tail, house, heart, and paw.</desc>
+  <rect width="512" height="512" rx="64" fill="#fbf8ef"/>
+  <g fill="none" stroke="#24786f" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M155 343c-49-28-75-78-75-136 0-61 35-113 85-142 10 35 32 57 58 67-37 27-62 71-62 120 0 39 16 74 42 98" stroke-width="9"/>
+    <path d="M264 358c0-44 34-81 77-85 31-3 61 10 81 34 18-17 27-40 27-65 0-53-41-97-93-101" stroke-width="9"/>
+    <path d="M170 259l86-76 86 76" stroke-width="10"/>
+    <path d="M196 255v95" stroke-width="10"/>
+    <path d="M316 255v95" stroke-width="10"/>
+    <path d="M173 258h166" stroke-width="10"/>
+    <path d="M228 309c9-18 22-28 28-28s19 10 28 28c0 0-23 28-28 33-5-5-28-33-28-33Z" stroke-width="8"/>
+    <path d="M319 240v-22h26v45" stroke-width="10"/>
+    <path d="M351 85c-17 7-28 22-28 42 0 26 20 45 45 45 20 0 35-11 42-28" stroke-width="9"/>
+    <path d="M313 125c-21 8-33 26-33 48 0 27 20 48 47 48" stroke-width="9"/>
+    <path d="M400 120c18 5 33 22 33 43 0 25-20 45-44 46" stroke-width="9"/>
+    <path d="M364 175c-35 0-64 29-64 64" stroke-width="9"/>
+  </g>
+</svg>
